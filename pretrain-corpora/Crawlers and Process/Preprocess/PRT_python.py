@@ -86,7 +86,7 @@ def unicodetoascii(text):
     return TEXT
 pandarallel.initialize(nb_workers=8, progress_bar=False) 
 
-df = pd.DataFrame(glob.glob('El-Panama-America_final.csv'), columns = ['path'])
+df = pd.DataFrame(glob.glob('El-Panama-America_final/*/*.csv'), columns = ['path'])
 df['source'] = df.path.apply(lambda x: x.split('/')[1].replace('.csv',''))
 df = df.sort_values('source').reset_index(drop=True)
 df['attributes']= df.path.parallel_apply(get_attribute)
