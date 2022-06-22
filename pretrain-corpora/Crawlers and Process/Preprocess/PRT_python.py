@@ -84,7 +84,7 @@ def unicodetoascii(text):
             replace('\\xe2\\x81\\xbd', "(").
             replace('\\xe2\\x81\\xbe', ")"))
     return TEXT
-pandarallel.initialize(nb_workers=8, progress_bar=False) 
+pandarallel.initialize(nb_workers=1, progress_bar=True) 
 
 df = pd.DataFrame(glob.glob('El-Panama-America_final/*/*.csv'), columns = ['path'])
 df['source'] = df.path.apply(lambda x: x.split('/')[1].replace('.csv',''))
