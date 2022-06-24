@@ -183,7 +183,7 @@ religión
 resultados
 resumen
 Remo
-rugby\N
+rugby
 Russell 2000
 Russell US Index
 ryder\b
